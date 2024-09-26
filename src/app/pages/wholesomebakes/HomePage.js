@@ -5,6 +5,7 @@ import Footer from '../../wholesomebakes/Footer';
 import Home from '../../wholesomebakes/Home';
 
 const HomePage = ({ addToCart, cartCount }) => {
+
   return (
     <div>
       <GuestHeader cartCount={cartCount} />

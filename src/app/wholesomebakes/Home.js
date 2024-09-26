@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState } from "react";
 
 import {
@@ -29,7 +31,7 @@ import ProductCard from "./ProductCard";
 import bakeryImage from "../../../assets/wholesomebakes/bakery.jpg";
 import eclairImage from "../../../assets/wholesomebakes/eclair.jpg";
 import oatmealCreamPieImage from "../../../assets/wholesomebakes/oatmealCreamPie.jpg";
-import { useNavigate } from "react-router-dom";
+
 
 function Home({ addToCart }) {
   const [popupOpen, setPopupOpen] = useState(true);
@@ -39,7 +41,7 @@ function Home({ addToCart }) {
     setPopupOpen(false);
   };
 
-  const navigate = useNavigate();
+  
 
   const handleWhyBuyChange = (event, newValue) => {
     setWhyBuyTab(newValue);

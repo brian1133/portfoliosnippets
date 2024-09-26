@@ -1,6 +1,8 @@
+"use client"
+
 import React, { useState, useRef, useEffect } from 'react';
 import { AppBar, Toolbar, Typography, Button, IconButton, Badge, InputBase } from '@mui/material';
-import { Link, useNavigate } from 'react-router-dom';
+
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -49,7 +51,7 @@ function GuestHeader({ cartCount }) {
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const searchInputRef = useRef(null);
-  const navigate = useNavigate();
+
 
   const handleSearchIconClick = () => {
     setSearchOpen(!searchOpen);
@@ -94,13 +96,13 @@ function GuestHeader({ cartCount }) {
         </Typography>
         {!searchOpen && (
           <>
-            <Button color="inherit" component={Link} to="/" style={{ marginRight: '20px' }}>Home</Button>
-            <Button color="inherit" component={Link} to="/menu" style={{ marginRight: '20px' }}>Menu</Button>
-            <Button color="inherit" component={Link} to="/gettoknowme" style={{ marginRight: '20px' }}>Get to Know Us</Button>
-            <Button color="inherit" component={Link} to="/contact" style={{ marginRight: '20px' }}>Contact</Button>
+            <Button color="inherit"  to="/" style={{ marginRight: '20px' }}>Home</Button>
+            <Button color="inherit"  to="/menu" style={{ marginRight: '20px' }}>Menu</Button>
+            <Button color="inherit"  to="/gettoknowme" style={{ marginRight: '20px' }}>Get to Know Us</Button>
+            <Button color="inherit"  to="/contact" style={{ marginRight: '20px' }}>Contact</Button>
           </>
         )}
-        <IconButton color="inherit" component={Link} to="/cart" style={{ marginRight: '20px' }}>
+        <IconButton color="inherit"  to="/cart" style={{ marginRight: '20px' }}>
           <Badge badgeContent={cartCount} color="secondary">
             <ShoppingCartIcon />
           </Badge>
@@ -125,7 +127,7 @@ function GuestHeader({ cartCount }) {
             <SearchIcon />
           </IconButton>
         )}
-        <IconButton color="inherit" component={Link} to="/login">
+        <IconButton color="inherit"  to="/login">
           <AccountCircleIcon />
         </IconButton>
       </Toolbar>
